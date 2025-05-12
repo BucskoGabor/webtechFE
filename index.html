@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autók kezelése</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Autók kezelése - Bucskó Gábor PSD1T8</h1>
+    </header>
+
+    <main>
+        <button id="add-car">+ Új autó</button>
+        <table id="car-table">
+            <thead>
+                <tr>
+                    <th>Márka</th>
+                    <th>Modell</th>
+                    <th>Elektromos</th>
+                    <th>Fogyasztás</th>
+                    <th>Forgalomba helyezés</th>
+                    <th>Tulajdonos</th>
+                    <th>Műveletek</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p id="message"></p>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Autó adatai</h2>
+            <form id="car-form">
+                <input type="hidden" id="car-id">
+
+                <label for="brand">Márka:</label>
+                <select id="brand" required>
+                    <option value="">-- Válassz márkát --</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Kia">Kia</option>
+                    <option value="Subaru">Subaru</option>
+                    <option value="Lexus">Lexus</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="Jeep">Jeep</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="Volvo">Volvo</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Land Rover">Land Rover</option>
+                    <option value="Mitsubishi">Mitsubishi</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Lamborghini">Lamborghini</option>
+                </select>
+
+                <label for="model">Modell:</label>
+                <input type="text" id="model" required>
+
+                <label for="electric">Elektromos:</label>
+                <select id="electric">
+                    <option value="true">Igen</option>
+                    <option value="false">Nem</option>
+                </select>
+
+                <label for="fuelUse">Fogyasztás (L/100km):</label>
+                <input type="number" step="0.1" id="fuelUse" required>
+
+                <label for="dayOfCommission">Forgalomba helyezés dátuma:</label>
+                <input type="date" id="dayOfCommission" required>
+
+                <label for="owner">Tulajdonos:</label>
+                <input type="text" id="owner" required>
+
+                <button type="submit">Mentés</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
